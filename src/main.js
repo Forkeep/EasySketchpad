@@ -216,7 +216,7 @@ useEraser.onclick = () => {
 downloadBtn.onclick = () => {
   let a = document.createElement('a');
   document.body.appendChild(a);
-  a.href = canvas.toDataURL();
+  a.href = canvas.toDataURL('image/png',1.0);
   a.download = '灵动画板.png';
   a.click();
 };

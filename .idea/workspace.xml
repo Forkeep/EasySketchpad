@@ -2,23 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0ec0b0a6-dcfe-46f9-85c3-5a027c4c1d6c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/iconfont.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.cache/ca/3211e7a612b10a7914e05793aab592.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/ca/3211e7a612b10a7914e05793aab592.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.cache/e3/988f462ecd3f3013c79a440a9c61c6.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/e3/988f462ecd3f3013c79a440a9c61c6.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.cache/f2/f841f68ffa7bef8482afa730f9ba21.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/f2/f841f68ffa7bef8482afa730f9ba21.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.cache/f6/f75cf8353a816d9fdc05c79c5b108a.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/f6/f75cf8353a816d9fdc05c79c5b108a.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/main.1f19ae8e.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/main.1f19ae8e.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/main.1f19ae8e.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/main.1f19ae8e.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/style.e308ff8e.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/style.e308ff8e.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/style.e308ff8e.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/style.e308ff8e.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/style.e308ff8e.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/style.e308ff8e.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/style.e308ff8e.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/style.e308ff8e.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/iconfont.b9d1c07b.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/iconfont.b9d1c07b.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main.1f19ae8e.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main.1f19ae8e.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/style.e308ff8e.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/style.e308ff8e.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/style.e308ff8e.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/style.e308ff8e.js.map" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +82,7 @@
       <option name="presentableId" value="Default" />
       <updated>1584440292420</updated>
       <workItem from="1584440295692" duration="960000" />
-      <workItem from="1584687689273" duration="15060000" />
+      <workItem from="1584687689273" duration="15964000" />
     </task>
     <servers />
   </component>
