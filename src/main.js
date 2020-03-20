@@ -131,7 +131,7 @@ anyPenWidth.oninput = (e)=>{
 penStyleReset.onclick = () => {
   alert('重置画笔成功！颜色笔粗已重置~');
   ctx.strokeStyle = 'black';
-  ctx.lineWidth = 1;
+  ctx.lineWidth = 2;
 };
 
 
@@ -175,6 +175,9 @@ chooseEraser.oninput = (e) => {
 //清空功能
 clearWrapper.onclick = () => {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
+  setTimeout(()=>{
+    alert('画板已清空！')
+  },0)
 };
 
 
