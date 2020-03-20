@@ -1,23 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0ec0b0a6-dcfe-46f9-85c3-5a027c4c1d6c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.cache/f6/f75cf8353a816d9fdc05c79c5b108a.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/f6/f75cf8353a816d9fdc05c79c5b108a.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/iconfont.b9d1c07b.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/iconfont.b9d1c07b.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/index.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/main.1f19ae8e.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/main.1f19ae8e.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/style.e308ff8e.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/style.e308ff8e.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/style.e308ff8e.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/style.e308ff8e.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.js" afterDir="false" />
-    </list>
+    <list default="true" id="0ec0b0a6-dcfe-46f9-85c3-5a027c4c1d6c" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -82,7 +66,7 @@
       <option name="presentableId" value="Default" />
       <updated>1584440292420</updated>
       <workItem from="1584440295692" duration="960000" />
-      <workItem from="1584687689273" duration="15964000" />
+      <workItem from="1584687689273" duration="16272000" />
     </task>
     <servers />
   </component>
