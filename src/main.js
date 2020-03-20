@@ -6,6 +6,10 @@ var ctx = canvas.getContext('2d');
 ctx.strokeStyle = 'black';
 ctx.lineWidth = 2;
 ctx.lineCap = 'round';
+ctx.fillStyle = 'white';
+ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+
 
 let lastPoint = [0, 0];
 
@@ -174,7 +178,8 @@ chooseEraser.oninput = (e) => {
 };
 //清空功能
 clearWrapper.onclick = () => {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.fillStyle = 'white';
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
   setTimeout(()=>{
     alert('画板已清空！')
   },0)
