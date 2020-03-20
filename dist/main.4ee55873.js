@@ -125,6 +125,8 @@ var ctx = canvas.getContext('2d');
 ctx.strokeStyle = 'black';
 ctx.lineWidth = 2;
 ctx.lineCap = 'round';
+ctx.fillStyle = 'white';
+ctx.fillRect(0, 0, canvas.width, canvas.height);
 var lastPoint = [0, 0];
 
 function drawLine(lastX, lastY, X, Y) {
@@ -304,7 +306,8 @@ chooseEraser.oninput = function (e) {
 
 
 clearWrapper.onclick = function () {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.fillStyle = 'white';
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
   setTimeout(function () {
     alert('画板已清空！');
   }, 0);
@@ -351,4 +354,4 @@ downloadBtn.onclick = function () {
   a.click();
 };
 },{}]},{},["epB2"], null)
-//# sourceMappingURL=main.e612c2e3.js.map
+//# sourceMappingURL=main.4ee55873.js.map
