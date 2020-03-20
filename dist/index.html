@@ -5,9 +5,19 @@
   <title>灵动画板</title>
   <link rel="stylesheet" href="/style.e308ff8e.css">
   <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,shrink-to-fit=no" name="viewport">
+  <style>.icon {
+      width: 3em;
+      height: 3em;
+      vertical-align: -0.15em;
+      fill: currentColor;
+      overflow: hidden;
+    }</style>
+
 <script src="/style.e308ff8e.js"></script></head>
 
 <body>
+<div id="eraserCircle"></div>
+
 <div id="wrapper">
   <div id="penStyle">
     <ul id="color">
@@ -31,17 +41,46 @@
 
   <div id="eraser">
     <ul>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
+      <li id="eraser2">1</li>
+      <li id="eraser4">2</li>
+      <li id="eraser8">3</li>
+      <li id="eraser16">4</li>
+      <li>
+        <label for="chooseEraser"><input id="chooseEraser" type="range" min="4px" max="40px"></label>
+      </li>
     </ul>
   </div>
+
+
+
+  <div class="tools">
+    <div id="clearWrapper">
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-del"></use>
+        </svg>
+    </div>
+    <div id="usePen" class="active">
+      <svg class="icon" aria-hidden="true">
+        <use xlink:href="#icon-pan_icon"></use>
+      </svg>
+    </div>
+    <div id="useEraser">
+      <svg class="icon" aria-hidden="true">
+        <use xlink:href="#icon-icon-test"></use>
+      </svg>
+    </div>
+    <div id="downloadBtn">
+      <svg class="icon" aria-hidden="true">
+        <use xlink:href="#icon-Group-"></use>
+      </svg>
+    </div>
+  </div>
+
 
   <canvas id="canvas">
   </canvas>
 </div>
 <script src="/main.1f19ae8e.js"></script>
+<script src="/iconfont.b9d1c07b.js"></script>
 </body>
 </html>

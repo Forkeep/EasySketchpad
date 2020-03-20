@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+
+body{
+  overflow: hidden;
+}
 :focus{
   outline: none;
 }
@@ -17,6 +21,7 @@ ul,ol{
 }
 
 #penStyle{
+  /*display: none;*/
   position: absolute;
   top: 10px;
   left: 20px;
@@ -117,18 +122,62 @@ ul,ol{
 }
 
 
-#eraser{
+#eraser {
+  display: none;
   border: 1px solid red;
   position: absolute;
   top: 10px;
-  left: 100px;
+  left: 20px;
 }
-#eraser>ul>li{
+
+#eraserCircle {
+  z-index: 1;
+  position: absolute;
+  display: none;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: navajowhite;
+  box-shadow: 0 0 3px 3px navajowhite;
+}
+
+#eraser > ul > li {
+  border: 1px solid red;
   margin: 10px 0;
+  width: 60px;
+  height: 60px;
+}
+#eraser>ul #chooseEraser{
+  width: 60px;
+
 }
 
 
+.tools {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  display: flex;
+  flex-direction: row;
+}
 
+.tools > div {
+  margin: 10px 10px;
+}
 
+#usePen.active .icon{
+  fill: red;
+}
+
+#useEraser.active .icon{
+  fill: red;
+}
+
+#clearWrapper {
+  bottom: 10px;
+  right: 10px;
+}
 
 /*# sourceMappingURL=/style.e308ff8e.css.map */

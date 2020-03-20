@@ -123,7 +123,7 @@ canvas.height = document.documentElement.clientHeight;
 canvas.width = document.documentElement.clientWidth;
 var ctx = canvas.getContext('2d');
 ctx.strokeStyle = 'black';
-ctx.lineWidth = 1;
+ctx.lineWidth = 2;
 ctx.lineCap = 'round';
 var lastPoint = [0, 0];
 
@@ -132,8 +132,9 @@ function drawLine(lastX, lastY, X, Y) {
   ctx.moveTo(lastX, lastY);
   ctx.lineTo(X, Y);
   ctx.stroke();
-} //画图功能
+}
 
+var isEraser = false; //画图功能
 
 var isTouchAble = 'ontouchstart' in document.documentElement;
 
@@ -157,7 +158,15 @@ if (isTouchAble) {
   };
 
   canvas.onmousemove = function (e) {
-    if (isMoving === true) {
+    if (isMoving) {
+      if (isEraser) {
+        eraserCircle.style.display = 'block';
+        var left = e.clientX - eraserCircle.clientWidth / 2;
+        var top = e.clientY - eraserCircle.clientHeight / 2;
+        eraserCircle.style.top = "".concat(top, "px");
+        eraserCircle.style.left = "".concat(left, "px");
+      }
+
       drawLine(lastPoint[0], lastPoint[1], e.clientX, e.clientY);
       lastPoint = [e.clientX, e.clientY];
     }
@@ -166,6 +175,27 @@ if (isTouchAble) {
   canvas.onmouseup = function (e) {
     isMoving = false;
     lastPoint = [0, 0];
+    eraserCircle.style.display = 'none';
+  };
+
+  eraserCircle.onmouseup = function () {
+    isMoving = false;
+    eraserCircle.style.display = 'none';
+  };
+
+  eraserCircle.onmousemove = function (e) {
+    if (isMoving) {
+      if (isEraser) {
+        eraserCircle.style.display = 'block';
+        var left = e.clientX - eraserCircle.clientWidth / 2;
+        var top = e.clientY - eraserCircle.clientHeight / 2;
+        eraserCircle.style.top = "".concat(top, "px");
+        eraserCircle.style.left = "".concat(left, "px");
+      }
+
+      drawLine(lastPoint[0], lastPoint[1], e.clientX, e.clientY);
+      lastPoint = [e.clientX, e.clientY];
+    }
   };
 } //换颜色功能
 
@@ -174,30 +204,37 @@ anyColor = document.getElementById('anyColor');
 
 anyColor.onchange = function (e) {
   ctx.strokeStyle = e.target.value;
+  isEraser = false;
 };
 
 anyColor.oninput = function (e) {
   ctx.strokeStyle = e.target.value;
+  isEraser = false;
 };
 
 red.onclick = function () {
   ctx.strokeStyle = 'red';
+  isEraser = false;
 };
 
 black.onclick = function () {
   ctx.strokeStyle = 'black';
+  isEraser = false;
 };
 
 blue.onclick = function () {
   ctx.strokeStyle = 'blue';
+  isEraser = false;
 };
 
 yellow.onclick = function () {
   ctx.strokeStyle = 'yellow';
+  isEraser = false;
 };
 
 green.onclick = function () {
   ctx.strokeStyle = 'green';
+  isEraser = false;
 }; //换笔粗功能
 
 
@@ -214,7 +251,6 @@ width6.onclick = function () {
 };
 
 anyPenWidth.oninput = function (e) {
-  // console.log(e);
   ctx.lineWidth = e.target.valueAsNumber;
 }; //重置画笔功能
 
@@ -224,6 +260,93 @@ penStyleReset.onclick = function () {
   ctx.strokeStyle = 'black';
   ctx.lineWidth = 1;
 }; //橡皮功能
+
+
+eraser2.onclick = function () {
+  ctx.strokeStyle = 'white';
+  ctx.lineWidth = 4;
+  eraserCircle.style.width = '4px';
+  eraserCircle.style.height = '4px';
+  isEraser = true;
+};
+
+eraser4.onclick = function () {
+  ctx.strokeStyle = 'white';
+  ctx.lineWidth = 8;
+  eraserCircle.style.width = '8px';
+  eraserCircle.style.height = '8px';
+  isEraser = true;
+};
+
+eraser8.onclick = function () {
+  ctx.strokeStyle = 'white';
+  ctx.lineWidth = 16;
+  eraserCircle.style.width = '16px';
+  eraserCircle.style.height = '16px';
+  isEraser = true;
+};
+
+eraser16.onclick = function () {
+  ctx.strokeStyle = 'white';
+  ctx.lineWidth = 32;
+  eraserCircle.style.width = '32px';
+  eraserCircle.style.height = '32px';
+  isEraser = true;
+};
+
+chooseEraser.oninput = function (e) {
+  ctx.strokeStyle = 'white';
+  ctx.lineWidth = e.target.valueAsNumber;
+  eraserCircle.style.width = "".concat(ctx.lineWidth, "px");
+  eraserCircle.style.height = "".concat(ctx.lineWidth, "px");
+  isEraser = true;
+}; //清空功能
+
+
+clearWrapper.onclick = function () {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+}; //切换工具功能
+
+
+var isPen = true;
+
+usePen.onclick = function () {
+  if (!isPen) {
+    ctx.restore();
+    isPen = true;
+    penStyle.style.display = 'block';
+    usePen.classList.add('active');
+    eraser.style.display = 'none';
+    useEraser.classList.remove('active');
+    eraserCircle.style.display = 'none';
+    isEraser = false;
+  }
+};
+
+useEraser.onclick = function () {
+  if (isPen) {
+    ctx.save();
+    isPen = false;
+    eraser.style.display = 'block';
+    useEraser.classList.add('active');
+    penStyle.style.display = 'none';
+    usePen.classList.remove('active');
+    ctx.strokeStyle = 'white';
+    ctx.lineWidth = 2;
+    eraserCircle.style.width = '2px';
+    eraserCircle.style.height = '2px';
+    isEraser = true;
+  }
+}; //下载功能
+
+
+downloadBtn.onclick = function () {
+  var a = document.createElement('a');
+  document.body.appendChild(a);
+  a.href = canvas.toDataURL();
+  a.download = '灵动画板.png';
+  a.click();
+};
 },{}],"../../../.config/yarn/global/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -252,7 +375,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49153" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59011" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
