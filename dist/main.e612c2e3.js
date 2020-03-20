@@ -258,7 +258,7 @@ anyPenWidth.oninput = function (e) {
 penStyleReset.onclick = function () {
   alert('重置画笔成功！颜色笔粗已重置~');
   ctx.strokeStyle = 'black';
-  ctx.lineWidth = 1;
+  ctx.lineWidth = 2;
 }; //橡皮功能
 
 
@@ -305,6 +305,9 @@ chooseEraser.oninput = function (e) {
 
 clearWrapper.onclick = function () {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
+  setTimeout(function () {
+    alert('画板已清空！');
+  }, 0);
 }; //切换工具功能
 
 
@@ -348,4 +351,4 @@ downloadBtn.onclick = function () {
   a.click();
 };
 },{}]},{},["epB2"], null)
-//# sourceMappingURL=main.e9687fae.js.map
+//# sourceMappingURL=main.e612c2e3.js.map

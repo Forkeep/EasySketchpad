@@ -124,7 +124,6 @@ ul,ol{
 
 #eraser {
   display: none;
-  border: 1px solid red;
   position: absolute;
   top: 10px;
   left: 20px;
@@ -142,16 +141,57 @@ ul,ol{
   background-color: navajowhite;
   box-shadow: 0 0 3px 3px navajowhite;
 }
+#eraser > ul{
+  display: flex;
+  flex-direction:  column;
+  justify-content: center;
+  align-items: start;
+}
 
 #eraser > ul > li {
-  border: 1px solid red;
   margin: 10px 0;
   width: 60px;
   height: 60px;
 }
+#eraser > ul > li:nth-child(1) {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: navajowhite;
+}
+#eraser > ul > li:nth-child(2) {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: navajowhite;
+}
+
+#eraser > ul > li:nth-child(3) {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: navajowhite;
+}
+#eraser > ul > li:nth-child(4) {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: navajowhite;
+}
+
+
+
+#eraser > ul > li:nth-child(1):hover,
+#eraser > ul > li:nth-child(2):hover,
+#eraser > ul > li:nth-child(3):hover,
+#eraser > ul > li:nth-child(4):hover{
+ box-shadow: 0 0 3px 3px #888888;
+}
+
+
+
 #eraser>ul #chooseEraser{
   width: 60px;
-
 }
 
 
@@ -180,4 +220,4 @@ ul,ol{
   right: 10px;
 }
 
-/*# sourceMappingURL=style.8845b2f5.css.map */
+/*# sourceMappingURL=style.b9fcd99d.css.map */
